@@ -1,0 +1,204 @@
+
+*,
+*::after,
+*::before {
+	-webkit-box-sizing: border-box;
+	box-sizing: border-box;
+}
+
+body {
+	font-family: 'Montserrat', Arial, sans-serif;
+	counter-reset: gridcounter;
+	color: #000;
+	background: #f9f9f9;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+}
+
+a {
+	text-decoration: none;
+	color: #999;
+	outline: none;
+}
+
+a:hover,
+a:focus {
+	color: #000;
+	outline: none;
+}
+
+.special-link {
+	position: relative;
+	color: #f64040;
+	-webkit-transition: color 0.2s;
+	transition: color 0.2s;
+}
+
+.special-link svg {
+	left: 0;
+}
+
+.special-link:hover,
+.special-link:focus {
+	color: #D52828;
+}
+
+/* Header */
+
+.header {
+	position: relative;
+	display: -webkit-flex;
+	display: flex;
+	-webkit-flex-wrap: wrap;
+	flex-wrap: wrap;
+	-webkit-align-items: center;
+	align-items: center;
+	padding: 1.75em 0.85em 1.5em;
+	
+}
+
+.main-title {
+	line-height: 1;
+	padding: 0.1em 0;
+	margin: 0;
+	text-align: center;
+	width: 100%;
+}
+
+.main-title img{
+    width: 150px;
+    opacity: 0.85;
+}
+
+.dotted {
+	color: #f64040;
+}
+
+.dotted::before,
+.dotted::after {
+	content: '\2022';
+	font-size: 0.75em;
+	opacity: 0.4;
+}
+
+.main-info {
+	padding: 1em 1em 0;
+	margin: 0 auto;
+	color: #414141;
+	max-width: 40em;
+	text-align: center;
+    line-height: 1.28;
+    font-size: 16px;
+}
+.main-info a{
+    font-weight: bold;
+}
+
+/* Top Navigation Style */
+
+.codrops-links {
+	position: relative;
+	display: inline-block;
+	text-align: center;
+	white-space: nowrap;
+	pointer-events: auto;
+}
+
+.codrops-links::after,
+.codrops-demos a:not(:last-child)::after {
+	content: '';
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	width: 1px;
+	height: 100%;
+	background: #aaa;
+	-webkit-transform: translateY(-50%) rotate3d(0, 0, 1, 22.5deg);
+	transform: translateY(-50%) rotate3d(0, 0, 1, 22.5deg);
+}
+
+.codrops-icon {
+	display: inline-block;
+	width: 1.5em;
+	margin: 0 0.5em;
+	text-decoration: none;
+}
+
+.codrops-icon span {
+	display: none;
+}
+
+.codrops-icon::before {
+	font-family: 'codropsicons';
+	font-weight: normal;
+	font-style: normal;
+	font-variant: normal;
+	line-height: 1;
+	margin: 0 5px;
+	text-transform: none;
+	-webkit-font-smoothing: antialiased;
+	speak: none;
+}
+
+.codrops-icon--drop::before {
+	content: '\e001';
+	color: #988ADE;
+}
+
+.codrops-icon--prev::before {
+	content: '\e004';
+}
+
+
+/* Demo links */
+.codrops-demos {
+	font-weight: bold;
+	line-height: 1;
+	margin: 0 1em 0 auto;
+	text-align: center;
+}
+
+.codrops-demos a {
+	position: relative;
+	display: inline-block;
+	pointer-events: auto;
+}
+
+.codrops-demos a:not(:last-child)::after {
+	left: calc(100% + 0.5em);
+}
+
+.codrops-demos a:not(:last-child) {
+	margin: 0 1em 0.1em 0;
+}
+
+.codrops-demos a.current-demo {
+	color: #504f55;
+}
+
+
+/* Content */
+
+.content {
+    padding: 1em 0 3em;
+    max-width: 1080px;
+    margin: 0 auto;
+}
+
+.grid__item a {
+    filter: grayscale(100%);
+    -webkit-filter: grayscale(100%);
+    -moz-filter: grayscale(100%);
+    filter: grayscale(100%);
+    filter: gray;
+    -webkit-filter: grayscale(1);
+}
+
+.grid__item a:hover{
+    filter: grayscale(0%);
+    -webkit-filter: grayscale(0%);
+    -moz-filter: grayscale(0%);
+    filter: grayscale(0%);
+    
+    -webkit-filter: grayscale(0);
+}
