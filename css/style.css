@@ -141,6 +141,22 @@
 	display: none;
 }
 
+
+.description--grid a:first-child{
+    float: left;
+    width: 225px;
+}
+
+.description--grid a:last-child{
+    margin-left: 5px;
+    float: right;
+}
+
+.description--grid a:last-child i.fa-lg{
+    font-size: 1.3em !important;
+    vertical-align: -5% !important;
+}
+
 .description--preview {
 	position: fixed;
 	z-index: 140;
